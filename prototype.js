@@ -1,20 +1,6 @@
 window.onload=function(){
 /*
-const boxs = Array.from(document.getElementsByClassName('boundary'));
 
-// 👇️ Change text color on mouseover
-boxs.forEach(box => {
-  box.addEventListener('mouseover', function handleMouseOver() {
-
-      box.style.backgroundColor = 'red';
-});
-});
-// 👇️ Change text color back on mouseout
-for (const box of boxs) {
-  box.addEventListener('mouseout', function handleMouseOut() {
-    box.style.backgroundColor = '#eeeeee';
-});
-}
 */
 
 const boxs = Array.from(document.getElementsByClassName('boundary'));
@@ -34,22 +20,25 @@ start.addEventListener('mouseover',function() {
 
     });
     });
-
-
-
-end.addEventListener('mouseover',function(){
-
- 
-  if(loser) {
-      alert("Sorry, you lost.");
-      status.innerHTML = "you lost !!!";
-  } else {
-      alert("You win! ");
-      status.innerHTML = "You win!";
-  
-}
-
-})
+    /**
+     exo 3,4
+     */
+    function gameEnd() {
+      end.addEventListener('mouseover',function(){
+    
+     
+      if(loser) {
+          alert("Sorry, you lost.");
+          status.innerHTML = "you lost !!!";
+      } else {
+          alert("You win! ");
+          status.innerHTML = "You win!";
+      
+    }
+    
+    })
+    }
+gameEnd();
 
 })
 
